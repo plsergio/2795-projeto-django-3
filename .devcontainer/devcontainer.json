@@ -1,0 +1,32 @@
+{
+	"name": "pje-sessoes",
+	"dockerComposeFile": [
+		"docker-compose.yml"
+	],
+	"service": "api",
+	"workspaceFolder": "/app",
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+		  // Add the IDs of extensions you want installed when the container is created.
+		  "extensions": [
+		  	"pkief.material-icon-theme",
+		  	"mikestead.dotenv",
+		  	"donjayamanne.python-extension-pack",
+		  	"tabnine.tabnine-vscode"
+		  	// "ms-python.python",
+		  	// "VisualStudioExptTeam.vscodeintellicode",
+		  	// "GitLab.gitlab-workflow",
+		  	// "mhutchie.git-graph",
+		  ]
+		}
+	}
+
+	// "forwardPorts": [
+	// 	8000
+	// ],
+	// Use 'postCreateCommand' to run commands after the container is created.
+	//"postCreateCommand": "pip install --upgrade pip && pip install --user -r requirements.txt",
+	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	// "remoteUser": "app"
+}

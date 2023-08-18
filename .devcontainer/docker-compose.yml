@@ -1,0 +1,29 @@
+version: "3.7"
+services:
+  api:
+    container_name: pje-sessoes
+    tty: true
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    image: pje-sessoes
+    environment:
+      - TZ=America/Sao_Paulo
+    command: /bin/sh -c "sh /app/.devcontainer/deployDev.sh"
+    volumes:
+      - ..:/app
+    ports:
+      - "8000:8000"
+    network_mode: "host"
+  # db:
+  #   image: postgres
+  #   # volumes:
+  #   #   - ./data/db:/var/lib/postgresql/data
+  #   environment:
+  #     - POSTGRES_DB=postgres
+  #     - POSTGRES_USER=postgres
+  #     - POSTGRES_PASSWORD=postgres
+  #   ports:
+  #     - "5432:5432"
+  #   network_mode: "host"
+
